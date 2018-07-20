@@ -1,34 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChatPanel : UIBasePanel {
+public class LoginPanel : UIBasePanel {
 
-    public ChatPanel() : base(UIPanelType.ChatPanel)
+    public LoginPanel() : base(UIPanelType.LoginPanel)
     {
-
+        //Debug.LogError("##UIPanelType.LoginPanel.Name " + UIPanelType.LoginPanel.Name);
     }
+
 }
 
 
-public class ChatPanelView :AnimateView
+public class LoginPanelView : AnimateView
 {
     public override void OnEnter(UIBasePanel uiPanel)
     {
         base.OnEnter(uiPanel);
     }
 
-
     public override void OnExit(UIBasePanel uiPanel)
     {
         base.OnExit(uiPanel);
     }
 
-
     public override void OnPause(UIBasePanel uiPanel)
     {
         base.OnPause(uiPanel);
     }
-
 
     public override void OnResume(UIBasePanel uiPanel)
     {
@@ -36,15 +34,15 @@ public class ChatPanelView :AnimateView
     }
 
 
+    //返回按钮
     public void ReturnBtnClick()
     {
         UIPanelManager.Instance.Pop();
     }
 
 
-    public void NextBtnClick()
+    public void NextPanelClick()
     {
         UIPanelManager.Instance.Push(new GamePanel());
-
     }
 }

@@ -46,15 +46,11 @@ public class UIManager{
     /// <returns></returns>
     public GameObject GetSingleUI(UIPanelType uiPanelType)
     {
-        Debug.LogError("##GetSingleUI");
-        Debug.LogError("##uiPanelType.Path " + uiPanelType.Path);
         if (UIDic.ContainsKey(uiPanelType) == false || UIDic[uiPanelType] == null)
         {
             GameObject go = GameObject.Instantiate(Resources.Load<GameObject>(uiPanelType.Path)) as GameObject;
-            Debug.LogError("###go1 " + go.name);
             go.transform.SetParent(_uiRoot,false);
             go.name = uiPanelType.Name;
-            Debug.LogError("###go2 " + go.name);
             UIDic.AddOrReplace(uiPanelType,go);
             return go;
         }

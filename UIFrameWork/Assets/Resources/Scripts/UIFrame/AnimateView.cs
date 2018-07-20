@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimateView : UIBase {
+public abstract class AnimateView : UIBase {
 
 
 }

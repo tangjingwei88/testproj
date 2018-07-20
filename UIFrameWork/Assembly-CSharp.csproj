@@ -182,8 +182,8 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Resources\Scripts\ChatPanel.cs" />
      <Compile Include="Assets\Resources\Scripts\Common\DictionaryExtension.cs" />
-     <Compile Include="Assets\Resources\Scripts\GamePanel.cs" />
-     <Compile Include="Assets\Resources\Scripts\LoginPanel.cs" />
+     <Compile Include="Assets\Resources\Scripts\GamePanelView.cs" />
+     <Compile Include="Assets\Resources\Scripts\LoginPanelView.cs" />
      <Compile Include="Assets\Resources\Scripts\PackagePanel.cs" />
      <Compile Include="Assets\Resources\Scripts\UIFrame\AnimateView.cs" />
      <Compile Include="Assets\Resources\Scripts\UIFrame\UIBase.cs" />

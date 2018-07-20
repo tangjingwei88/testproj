@@ -6,6 +6,19 @@ public class UIPanelManager {
 
     private Stack<UIBasePanel> _UIPanelStack = new Stack<UIBasePanel>();
 
+
+    private static UIPanelManager _instance;
+    public static UIPanelManager Instance {
+        get {
+            if (_instance == null)
+            {
+                _instance = new UIPanelManager();
+            }
+            return _instance;
+        }
+        
+    }
+
     public UIPanelManager()
     {
         Push(new LoginPanel());
@@ -26,8 +39,6 @@ public class UIPanelManager {
 
         _UIPanelStack.Push(nextUIPanel);
 
-        GameObject obj = UIManager.Instance.GetSingleUI(nextUIPanel.PanelType);
-        Debug.LogError("##obj " + obj.name);
         UIBase nextUI = UIManager.Instance.GetSingleUI(nextUIPanel.PanelType).GetComponent<UIBase>();
         Debug.LogError("##nextUI " + nextUI.name);
         nextUI.OnEnter(nextUIPanel);
