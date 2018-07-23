@@ -30,7 +30,7 @@ public class UIManager{
 
     public UIManager()
     {
-        _uiRoot = GameObject.Find("UI Root").transform;
+        _uiRoot = GameObject.Find("UI Root/Camera").transform;
         foreach (Transform item in _uiRoot)
         {
             GameObject.Destroy(item.gameObject);
